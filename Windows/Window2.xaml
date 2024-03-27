@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="Пустая форма" Height="450" Width="800" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Здраствуйте, " Grid.Column="1" Grid.Row="1" FontSize="20" VerticalAlignment="Center" Name="tx4"/>
     </Grid>
 </Window>

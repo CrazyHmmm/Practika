@@ -8,8 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
-    <Folder Include="Classes\" />
+    <None Remove="Images\free-icon-avatar-6387915.png" />
+    <None Remove="Images\free-icon-change-password-10480729.png" />
+    <None Remove="Images\free-icon-eye-159604.png" />
+    <None Remove="Images\free-icon-left-return-arrow-60793.png" />
+    <None Remove="Images\free-icon-new-email-4627330.png" />
+    <None Remove="Images\free-icon-new-email-filled-envelope-60467.png" />
+    <None Remove="Images\free-icon-padlock-494933.png" />
+    <None Remove="Resources\free-icon-eye-9283726.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +25,17 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\free-icon-avatar-6387915.png" />
+    <Resource Include="Images\free-icon-change-password-10480729.png" />
+    <Resource Include="Images\free-icon-eye-159604.png" />
+    <Resource Include="Images\free-icon-left-return-arrow-60793.png" />
+    <Resource Include="Images\free-icon-new-email-4627330.png" />
+    <Resource Include="Images\free-icon-new-email-filled-envelope-60467.png" />
+    <Resource Include="Images\free-icon-padlock-494933.png" />
+    <Resource Include="Resources\free-icon-eye-9283726.png" />
   </ItemGroup>
 
   <ItemGroup>

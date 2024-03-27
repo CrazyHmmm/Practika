@@ -93,6 +93,16 @@ namespace WpfAppPRACTIKA.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Byte[].
         /// </summary>
+        internal static byte[] free_icon_eye_9283726 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-eye-9283726", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
         internal static byte[] free_icon_left_return_arrow_60793 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-left-return-arrow-60793", resourceCulture);

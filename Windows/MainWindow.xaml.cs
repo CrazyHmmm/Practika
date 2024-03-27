@@ -49,9 +49,10 @@ namespace WpfAppPRACTIKA
         private void b1_Click(object sender, RoutedEventArgs e)
         {
             var login = tx1.Text;
+            var email = tx1.Text;
             var password = tx2.Text;
             var context = new AppDbContext();
-            var user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == password);
+            var user = context.Users.SingleOrDefault(x => (x.Login == login  || x.Email == email) && x.Password == password);
             if (user is null) 
             {
                 MessageBox.Show("Вы идиот или же ввели неправильный логин или пароль");
@@ -67,6 +68,8 @@ namespace WpfAppPRACTIKA
         {
             public int Id { get; set; }
             public string Login { get; set; }
+
+            public string Email { get; set; }    
             public string Password { get; set; }
         }
 
@@ -76,8 +79,32 @@ namespace WpfAppPRACTIKA
 
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=UsersDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=chugunovDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
             }
+
+        }
+
+        private void tx1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((tx1.Text.Length == 0) || (tx2.Text.Length == 0) || (tx1.Text == ",") || (tx2.Text == ","))
+                b1.IsEnabled = false;
+            else b1.IsEnabled = true;
+        }
+
+        private void tx2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if ((tx1.Text.Length == 0) || (tx2.Text.Length == 0) || (tx1.Text == ",") || (tx2.Text == ","))
+                b1.IsEnabled = false;
+            else b1.IsEnabled = true;
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            b1.IsEnabled = false;
+        }
+
+        private void glaz_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

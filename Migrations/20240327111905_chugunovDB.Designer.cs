@@ -11,8 +11,8 @@ using WpfAppPRACTIKA;
 namespace WpfAppPRACTIKA.Migrations
 {
     [DbContext(typeof(MainWindow.AppDbContext))]
-    [Migration("20240326115752_Initial")]
-    partial class Initial
+    [Migration("20240327111905_chugunovDB")]
+    partial class chugunovDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,10 @@ namespace WpfAppPRACTIKA.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Login")
                         .IsRequired()

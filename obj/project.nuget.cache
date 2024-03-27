@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LvBWq/nrSpEFSCyFZHI2gEotwfbCr18WkJsHY+1uMvsJgoQ8h4rMK72cC142IiFdpD+4JjBURpUe2/JWWu44IA==",
+  "dgSpecHash": "80WcDRVZWGasDqRaJvjR7w74m8TsMh8GePjlNS2iFnWljS8rnyxGb8Zu1I9MfCqNk/QDTsJYspnuAUgL7ZlmLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\student\\Desktop\\WpfAppPRACTIKA\\WpfAppPRACTIKA.csproj",
+  "projectFilePath": "C:\\Users\\student\\Desktop\\Practika\\WpfAppPRACTIKA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\student\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\student\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
