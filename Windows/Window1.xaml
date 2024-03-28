@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfAppPRACTIKA.Windows"
         mc:Ignorable="d"
         Title="Окно регистрации" Height="450" Width="800" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
-    <Grid Background="DarkSlateGray" Loaded="Grid_Loaded">
+    <Grid Background="DarkSlateGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -39,10 +39,17 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBox Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="5" Name="tx2_1" TextChanged="tx2_1_TextChanged"/>
+        <Label x:Name="txtSearchPlaceholder_3" Content="Введите email" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="5" Background="Transparent" Opacity="0.5" IsHitTestVisible="False"/>
         <TextBox Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="5" Name="tx2_2" TextChanged="tx2_2_TextChanged"/>
-        <TextBox Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="5" Name="tx2_3" TextChanged="tx3_3_TextChanged"/>
-        <TextBox Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="5" Name="tx2_4" TextChanged="tx4_4_TextChanged"/>
+        <Label x:Name="txtSearchPlaceholder_4" Content="Придумайте логин" Grid.Column="4" Grid.Row="5" Grid.ColumnSpan="5" Background="Transparent" Opacity="0.5" IsHitTestVisible="False"/>
         <PasswordBox Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="5" Visibility="Hidden" x:Name="ps2_1" />
+        <TextBox Grid.Row="7" Grid.Column="4"  Grid.ColumnSpan="5" Name="tx2_3" TextChanged="tx3_3_TextChanged"/>
+      
+        <Label x:Name="txtSearchPlaceholder_5" Content="Придумайте пароль" Grid.Column="4" Grid.Row="7" Grid.ColumnSpan="5" Background="Transparent" Opacity="0.5" IsHitTestVisible="False"/>
+        <PasswordBox Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="5" x:Name="ps2_2"/>
+        <TextBox Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="5" Name="tx2_4" TextChanged="tx4_4_TextChanged"/>
+        <Label  x:Name="txtSearchPlaceholder_6" Content="Повторите пароль" Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="9" Background="Transparent" Opacity="0.5" IsHitTestVisible="False"/>
+        
         <TextBlock Text="Неправильно введён email!"  Grid.Row="2" Grid.Column="4" Visibility="Hidden" Foreground="Red" Background="Transparent" Grid.ColumnSpan="5" FontSize="18" HorizontalAlignment="Center" Name="error_email" />
         <TextBlock Text="Пароли не совпадают!" Grid.Row="8" Grid.Column="4" Visibility="Hidden" Foreground="Red" Background="Transparent" Grid.ColumnSpan="5" FontSize="18" HorizontalAlignment="Center" Name="error_pass"/>
         <TextBlock Text="Пароль должен содержать не меньше 6 символов!" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="5" Foreground="Red" Background="Transparent" FontSize="13" Visibility="Hidden" HorizontalAlignment="Center" Name="error_lenght"/>
@@ -60,5 +67,12 @@
         <Button Grid.Column="9" Grid.Row="7" Background="Transparent" BorderBrush="Transparent" Click="Button_Click_1" HorizontalAlignment="Left" Visibility="Hidden" Name="eye_2">
             <Image Source="C:\Users\student\Desktop\Practika\Resources\free-icon-eye-9283726.png"/>
         </Button>
+        <Button Grid.Column="9" Grid.Row="9" Background="Transparent"  BorderBrush="Transparent" HorizontalAlignment="Left" Click="eye_3_Click" Name="eye_3">
+            <Image Source="C:\Users\student\Desktop\Practika\Images\free-icon-eye-159604.png" />
+        </Button>
+        <Button Grid.Column="9" Grid.Row="9" Background="Transparent" BorderBrush="Transparent"  HorizontalAlignment="Left" Visibility="Hidden" Click="eye_4_Click" Name="eye_4">
+            <Image Source="C:\Users\student\Desktop\Practika\Resources\free-icon-eye-9283726.png"/>
+        </Button>
+        <TextBlock Text="Пароль должен содержать специульные символы" Grid.Row="8" Grid.Column="3" Visibility="Hidden" Foreground="Red" Background="Transparent" Grid.ColumnSpan="7" FontSize="18" HorizontalAlignment="Center" Name="error_pass_1"/>
     </Grid>
 </Window>

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfAppPRACTIKA.Windows;
 using Microsoft.EntityFrameworkCore;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace WpfAppPRACTIKA
@@ -48,21 +49,25 @@ namespace WpfAppPRACTIKA
 
         private void b1_Click(object sender, RoutedEventArgs e)
         {
+            ps1.Password = tx2.Text;
             var login = tx1.Text;
             var email = tx1.Text;
             var password = tx2.Text;
             var context = new AppDbContext();
-            var user = context.Users.SingleOrDefault(x => (x.Login == login  || x.Email == email) && x.Password == password);
-            if (user is null) 
+            var user = context.Users.SingleOrDefault(x => (x.Login == login  || x.Email == email) && (x.Password == password));
+            if (user is null)
             {
                 MessageBox.Show("Вы идиот или же ввели неправильный логин или пароль");
                 return;
-            
+
             }
-           else MessageBox.Show("Вы лучшие и вошли в свой акк");
-            Window2 w2 = new Window2();
+            MessageBox.Show("Вы лучшие и вошли в свой акк");
+            int id = user.Id;
+            Window2 w2 = new Window2(id);
             w2.Show();
             this.Hide();
+            
+
         }
         public class User
         {
@@ -81,31 +86,63 @@ namespace WpfAppPRACTIKA
             {
                 optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=chugunovDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
             }
-
+            
         }
 
         private void tx1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if ((tx1.Text.Length == 0) || (tx2.Text.Length == 0) || (tx1.Text == ",") || (tx2.Text == ","))
-                b1.IsEnabled = false;
-            else b1.IsEnabled = true;
+        {         
+
+            if (tx1.Text != "")
+            {
+                txtSearchPlaceholder.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                txtSearchPlaceholder.Visibility = Visibility.Visible;
+
+            }
+            if (ps1 != null) { b1.IsEnabled = true; } else { b1.IsEnabled = false; }
         }
 
         private void tx2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if ((tx1.Text.Length == 0) || (tx2.Text.Length == 0) || (tx1.Text == ",") || (tx2.Text == ","))
-                b1.IsEnabled = false;
-            else b1.IsEnabled = true;
-        }
 
-        private void Grid_Loaded(object sender, RoutedEventArgs e)
-        {
-            b1.IsEnabled = false;
+
+            if (tx2.Text != "")
+            {
+                txtSearchPlaceholder_2.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                txtSearchPlaceholder_2.Visibility = Visibility.Visible;
+
+            }
         }
+       
 
         private void glaz_Click(object sender, RoutedEventArgs e)
         {
+            var text = ps1.Password;
+            ps1.Visibility = Visibility.Collapsed;
+            tx2.Visibility = Visibility.Visible;
+            tx2.Text = text;
+            glaz.Visibility = Visibility.Hidden;
+            glaz_2.Visibility = Visibility.Visible;
+        }
 
+        private void glaz_2_Click(object sender, RoutedEventArgs e)
+        {
+            var text = tx2.Text;
+            ps1.Visibility = Visibility.Visible;
+            tx2.Visibility = Visibility.Collapsed;
+            ps1.Password = text;
+            glaz_2.Visibility = Visibility.Hidden;
+            glaz.Visibility = Visibility.Visible;
+        }
+
+        private void g1_Loaded(object sender, RoutedEventArgs e)
+        {
+            b1.IsEnabled = true;
         }
     }
 }

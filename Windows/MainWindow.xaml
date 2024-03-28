@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfAppPRACTIKA"
         mc:Ignorable="d"
         Title="Авторизация в системе" Height="450" Width="800" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
-    <Grid Background="LightGoldenrodYellow" Loaded="Grid_Loaded">
+    <Grid Background="LightGoldenrodYellow" Name="g1">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -30,11 +30,22 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBox Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="4" Name="tx1" TextChanged="tx1_TextChanged"/>
+
+      
+        <Label x:Name="txtSearchPlaceholder" Content="Введите email" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="4" Background="Transparent" Opacity="0.5" IsHitTestVisible="False"/>
+        <PasswordBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="4" x:Name="ps1"/>
         <TextBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="4" Name="tx2" TextChanged="tx2_TextChanged"/>
+        
+       
+        <Label x:Name="txtSearchPlaceholder_2" Content="Введите пароль" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="4" Background="Transparent" Opacity="0.5" IsHitTestVisible="False"/>
         <Button Background="Transparent" Height="30" Content="Не зарегистрированы? Зарегистрироваться" Click="tb1_Click_1" BorderBrush="Transparent" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="4" HorizontalAlignment="Center" FontSize="19" Name="tb1" />
         <Button Content="Войти" Background="Tan"  Grid.Row="8" Grid.Column="3" Click="b1_Click" Grid.ColumnSpan="2" Margin="4" Width="150" Name="b1"/>
         <Image Source="C:\Users\student\Desktop\Practika\Resources\free-icon-avatar-6387915.png" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" Name="I1"/>
         <Image Source="C:\Users\student\Desktop\Practika\Resources\free-icon-padlock-494933.png" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Right" Name="I2"/>
+       
+        <Button x:Name="glaz_2" Grid.Row="5" Click="glaz_2_Click" Grid.Column="6" HorizontalAlignment="Left" Visibility="Hidden" Background="Transparent" BorderBrush="Transparent">
+            <Image Source="C:\Users\student\Desktop\Practika\Images\free-icon-eye-9283726.png" Grid.Column="5" Grid.Row="5" HorizontalAlignment="Left" Name="I4"/>
+        </Button>
         <Button x:Name="glaz" Click="glaz_Click" Grid.Column="6" Grid.Row="5" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left">
             <Image Source="C:\Users\student\Desktop\Practika\Resources\free-icon-eye-159604.png" Grid.Column="6" Grid.Row="5" HorizontalAlignment="Left" Name="I3"/>
         </Button>

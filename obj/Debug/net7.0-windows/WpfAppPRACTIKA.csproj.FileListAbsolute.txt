@@ -135,3 +135,5 @@ C:\Users\student\Desktop\Practika\obj\Debug\net7.0-windows\WpfAppPRACTIKA.source
 C:\Users\student\Desktop\Practika\obj\Debug\net7.0-windows\WpfAppPR.FE56C939.Up2Date
 C:\Users\student\Desktop\Practika\obj\Debug\net7.0-windows\WpfAppPRACTIKA.genruntimeconfig.cache
 C:\Users\student\Desktop\Practika\obj\Debug\net7.0-windows\ref\WpfAppPRACTIKA.dll
+C:\Users\student\Desktop\Practika\obj\Debug\net7.0-windows\Window3.g.cs
+C:\Users\student\Desktop\Practika\obj\Debug\net7.0-windows\Window3.baml

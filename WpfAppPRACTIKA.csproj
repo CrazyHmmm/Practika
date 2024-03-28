@@ -15,6 +15,7 @@
     <None Remove="Images\free-icon-new-email-4627330.png" />
     <None Remove="Images\free-icon-new-email-filled-envelope-60467.png" />
     <None Remove="Images\free-icon-padlock-494933.png" />
+    <None Remove="Resources\free-icon-avatar-6387915.png" />
     <None Remove="Resources\free-icon-eye-9283726.png" />
   </ItemGroup>
 
@@ -35,6 +36,7 @@
     <Resource Include="Images\free-icon-new-email-4627330.png" />
     <Resource Include="Images\free-icon-new-email-filled-envelope-60467.png" />
     <Resource Include="Images\free-icon-padlock-494933.png" />
+    <Resource Include="Resources\free-icon-avatar-6387915.png" />
     <Resource Include="Resources\free-icon-eye-9283726.png" />
   </ItemGroup>
 

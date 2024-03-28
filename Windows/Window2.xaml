@@ -6,8 +6,13 @@
         xmlns:local="clr-namespace:WpfAppPRACTIKA.Windows"
         mc:Ignorable="d"
         Title="Пустая форма" Height="450" Width="800" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid Background="Aquamarine">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -16,7 +21,17 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Здраствуйте, " Grid.Column="1" Grid.Row="1" FontSize="20" VerticalAlignment="Center" Name="tx4"/>
+        <TextBlock Text="            Здраствуйте, " FontWeight="Heavy" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" FontSize="20" VerticalAlignment="Center" Name="tx4"/>
+        <TextBlock Grid.Column="4" Grid.Row="1" FontSize="20" FontWeight="Heavy" VerticalAlignment="Center" Name="tx5"/>
+        <Button Grid.Column="0" Grid.Row="0" Click="ret1_Click" Name="ret1" BorderBrush="Transparent" Background="Transparent">
+            <Image Source="C:\Users\student\Desktop\Practika\Resources\free-icon-left-return-arrow-60793.png" />
+        </Button>
+        <Button Grid.Column="7" Grid.Row="0" Click="change1_Click" Name="change1" BorderBrush="Transparent" Background="Transparent">
+            <Image Source="C:\Users\student\Desktop\Practika\Resources\free-icon-avatar-6387915.png"/>
+        </Button>
     </Grid>
 </Window>
